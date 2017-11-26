@@ -19,10 +19,6 @@ class AdminPage extends Component {
   render() {
     return (
       <div className="admin">
-        <Script
-          url="https://identity.netlify.com/v1/netlify-identity-widget.js" 
-          onLoad={this.handleScriptLoad.bind(this)}
-        />
         <Helmet>
           <meta charSet="utf-8" />
           <meta
@@ -37,6 +33,10 @@ class AdminPage extends Component {
           />
           <script src="https://unpkg.com/netlify-cms@~0.4/dist/cms.js" />
         </Helmet>
+        <Script
+          url="https://identity.netlify.com/v1/netlify-identity-widget.js" 
+          onLoad={this.handleScriptLoad.bind(this)}
+        />
       </div>
     );
   }
