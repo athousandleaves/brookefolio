@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: "src/pages/artworks"
+
+collections: 
+  - name: "Artwork"
+    label: "Artwork" # Used in the UI
+    folder: "src/pages/artworks" # The path to the folder where the documents are stored
+    create: true
+    slug: "{{title}}-{{year}}" # Filename template
+    fields: # The fields for each document, usually in front matter
+      - {label: "Path", name: "path", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Year", name: "year", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
