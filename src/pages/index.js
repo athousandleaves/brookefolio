@@ -11,6 +11,7 @@ export default class IndexPage extends React.Component {
             document.location.href = '/admin/';
           });
         }
+        console.log(user);
       });
     }
     window.netlifyIdentity.init();
